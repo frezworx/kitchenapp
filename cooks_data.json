@@ -1,0 +1,262 @@
+[
+    {
+        "model": "home_app.cook",
+        "pk": 1,
+        "fields": {
+            "username": "cook1",
+            "first_name": "John",
+            "last_name": "Smith",
+            "email": "john.smith@example.com",
+            "years_of_experience": 2,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 2,
+        "fields": {
+            "username": "cook2",
+            "first_name": "Emily",
+            "last_name": "Johnson",
+            "email": "emily.johnson@example.com",
+            "years_of_experience": 3,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 3,
+        "fields": {
+            "username": "cook3",
+            "first_name": "Michael",
+            "last_name": "Williams",
+            "email": "michael.williams@example.com",
+            "years_of_experience": 4,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 4,
+        "fields": {
+            "username": "cook4",
+            "first_name": "Sarah",
+            "last_name": "Brown",
+            "email": "sarah.brown@example.com",
+            "years_of_experience": 5,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 5,
+        "fields": {
+            "username": "cook5",
+            "first_name": "David",
+            "last_name": "Jones",
+            "email": "david.jones@example.com",
+            "years_of_experience": 6,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 6,
+        "fields": {
+            "username": "cook6",
+            "first_name": "Emma",
+            "last_name": "Garcia",
+            "email": "emma.garcia@example.com",
+            "years_of_experience": 7,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 7,
+        "fields": {
+            "username": "cook7",
+            "first_name": "James",
+            "last_name": "Martinez",
+            "email": "james.martinez@example.com",
+            "years_of_experience": 8,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 8,
+        "fields": {
+            "username": "cook8",
+            "first_name": "Olivia",
+            "last_name": "Hernandez",
+            "email": "olivia.hernandez@example.com",
+            "years_of_experience": 9,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 9,
+        "fields": {
+            "username": "cook9",
+            "first_name": "Daniel",
+            "last_name": "Lopez",
+            "email": "daniel.lopez@example.com",
+            "years_of_experience": 10,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 10,
+        "fields": {
+            "username": "cook10",
+            "first_name": "Sophia",
+            "last_name": "Gonzalez",
+            "email": "sophia.gonzalez@example.com",
+            "years_of_experience": 1,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 11,
+        "fields": {
+            "username": "cook11",
+            "first_name": "Matthew",
+            "last_name": "Perez",
+            "email": "matthew.perez@example.com",
+            "years_of_experience": 2,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 12,
+        "fields": {
+            "username": "cook12",
+            "first_name": "Ava",
+            "last_name": "Davis",
+            "email": "ava.davis@example.com",
+            "years_of_experience": 3,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 13,
+        "fields": {
+            "username": "cook13",
+            "first_name": "Andrew",
+            "last_name": "Moore",
+            "email": "andrew.moore@example.com",
+            "years_of_experience": 4,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 14,
+        "fields": {
+            "username": "cook14",
+            "first_name": "Isabella",
+            "last_name": "Taylor",
+            "email": "isabella.taylor@example.com",
+            "years_of_experience": 5,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 15,
+        "fields": {
+            "username": "cook15",
+            "first_name": "Ethan",
+            "last_name": "Anderson",
+            "email": "ethan.anderson@example.com",
+            "years_of_experience": 6,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 16,
+        "fields": {
+            "username": "cook16",
+            "first_name": "Charlotte",
+            "last_name": "Thomas",
+            "email": "charlotte.thomas@example.com",
+            "years_of_experience": 7,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 17,
+        "fields": {
+            "username": "cook17",
+            "first_name": "Alexander",
+            "last_name": "Lee",
+            "email": "alexander.lee@example.com",
+            "years_of_experience": 8,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 18,
+        "fields": {
+            "username": "cook18",
+            "first_name": "Mia",
+            "last_name": "White",
+            "email": "mia.white@example.com",
+            "years_of_experience": 9,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 19,
+        "fields": {
+            "username": "cook19",
+            "first_name": "Benjamin",
+            "last_name": "Harris",
+            "email": "benjamin.harris@example.com",
+            "years_of_experience": 10,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    },
+    {
+        "model": "home_app.cook",
+        "pk": 20,
+        "fields": {
+            "username": "cook20",
+            "first_name": "Amelia",
+            "last_name": "Clark",
+            "email": "amelia.clark@example.com",
+            "years_of_experience": 1,
+            "is_superuser": false,
+            "is_staff": true
+        }
+    }
+]
