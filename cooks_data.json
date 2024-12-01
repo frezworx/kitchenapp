@@ -1,6 +1,6 @@
 [
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 1,
         "fields": {
             "username": "cook1",
@@ -13,7 +13,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 2,
         "fields": {
             "username": "cook2",
@@ -26,7 +26,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 3,
         "fields": {
             "username": "cook3",
@@ -39,7 +39,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 4,
         "fields": {
             "username": "cook4",
@@ -52,7 +52,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 5,
         "fields": {
             "username": "cook5",
@@ -65,7 +65,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 6,
         "fields": {
             "username": "cook6",
@@ -78,7 +78,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 7,
         "fields": {
             "username": "cook7",
@@ -91,7 +91,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 8,
         "fields": {
             "username": "cook8",
@@ -104,7 +104,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 9,
         "fields": {
             "username": "cook9",
@@ -117,7 +117,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 10,
         "fields": {
             "username": "cook10",
@@ -130,7 +130,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 11,
         "fields": {
             "username": "cook11",
@@ -143,7 +143,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 12,
         "fields": {
             "username": "cook12",
@@ -156,7 +156,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 13,
         "fields": {
             "username": "cook13",
@@ -169,7 +169,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 14,
         "fields": {
             "username": "cook14",
@@ -182,7 +182,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 15,
         "fields": {
             "username": "cook15",
@@ -195,7 +195,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 16,
         "fields": {
             "username": "cook16",
@@ -208,7 +208,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 17,
         "fields": {
             "username": "cook17",
@@ -221,7 +221,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 18,
         "fields": {
             "username": "cook18",
@@ -234,7 +234,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 19,
         "fields": {
             "username": "cook19",
@@ -247,7 +247,7 @@
         }
     },
     {
-        "model": "home_app.cook",
+        "model": "core_app.cook",
         "pk": 20,
         "fields": {
             "username": "cook20",

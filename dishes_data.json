@@ -1,699 +1,699 @@
 [
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 1,
         "fields": {
             "name": "Appetizers"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 2,
         "fields": {
             "name": "Soups"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 3,
         "fields": {
             "name": "Salads"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 4,
         "fields": {
             "name": "Main Courses"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 5,
         "fields": {
             "name": "Desserts"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 6,
         "fields": {
             "name": "Pasta"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 7,
         "fields": {
             "name": "Pizza"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 8,
         "fields": {
             "name": "Burgers"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 9,
         "fields": {
             "name": "Seafood"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 10,
         "fields": {
             "name": "Grilled"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 11,
         "fields": {
             "name": "Vegetarian"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 12,
         "fields": {
             "name": "Vegan"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 13,
         "fields": {
             "name": "Breakfast"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 14,
         "fields": {
             "name": "Lunch"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 15,
         "fields": {
             "name": "Dinner"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 16,
         "fields": {
             "name": "Asian"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 17,
         "fields": {
             "name": "Mexican"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 18,
         "fields": {
             "name": "Street Food"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 19,
         "fields": {
             "name": "Snacks"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 20,
         "fields": {
             "name": "Baked Goods"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 21,
         "fields": {
             "name": "Fusion"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 22,
         "fields": {
             "name": "Barbecue"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 23,
         "fields": {
             "name": "Sandwiches"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 24,
         "fields": {
             "name": "Drinks"
         }
     },
     {
-        "model": "home_app.dishtype",
+        "model": "core_app.dishtype",
         "pk": 25,
         "fields": {
             "name": "Ice Cream"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 1,
         "fields": {
             "name": "Tomato"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 2,
         "fields": {
             "name": "Cheese"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 3,
         "fields": {
             "name": "Basil"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 4,
         "fields": {
             "name": "Garlic"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 5,
         "fields": {
             "name": "Onion"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 6,
         "fields": {
             "name": "Salt"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 7,
         "fields": {
             "name": "Pepper"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 8,
         "fields": {
             "name": "Olive Oil"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 9,
         "fields": {
             "name": "Chicken Breast"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 10,
         "fields": {
             "name": "Beef"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 11,
         "fields": {
             "name": "Milk"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 12,
         "fields": {
             "name": "Egg"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 13,
         "fields": {
             "name": "Flour"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 14,
         "fields": {
             "name": "Sugar"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 15,
         "fields": {
             "name": "Rice"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 16,
         "fields": {
             "name": "Pasta"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 17,
         "fields": {
             "name": "Carrot"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 18,
         "fields": {
             "name": "Lettuce"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 19,
         "fields": {
             "name": "Mushroom"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 20,
         "fields": {
             "name": "Spinach"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 21,
         "fields": {
             "name": "Zucchini"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 22,
         "fields": {
             "name": "Cucumber"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 23,
         "fields": {
             "name": "Potato"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 24,
         "fields": {
             "name": "Cream"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 25,
         "fields": {
             "name": "Butter"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 26,
         "fields": {
             "name": "Honey"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 27,
         "fields": {
             "name": "Soy Sauce"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 28,
         "fields": {
             "name": "Chili"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 29,
         "fields": {
             "name": "Coriander"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 30,
         "fields": {
             "name": "Cumin"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 31,
         "fields": {
             "name": "Paprika"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 32,
         "fields": {
             "name": "Thyme"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 33,
         "fields": {
             "name": "Rosemary"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 34,
         "fields": {
             "name": "Parsley"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 35,
         "fields": {
             "name": "Oregano"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 36,
         "fields": {
             "name": "Salmon"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 37,
         "fields": {
             "name": "Shrimp"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 38,
         "fields": {
             "name": "Pork"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 39,
         "fields": {
             "name": "Bread"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 40,
         "fields": {
             "name": "Yogurt"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 41,
         "fields": {
             "name": "Lime"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 42,
         "fields": {
             "name": "Lemon"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 43,
         "fields": {
             "name": "Apple"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 44,
         "fields": {
             "name": "Orange"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 45,
         "fields": {
             "name": "Strawberry"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 46,
         "fields": {
             "name": "Blueberry"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 47,
         "fields": {
             "name": "Mint"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 48,
         "fields": {
             "name": "Cinnamon"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 49,
         "fields": {
             "name": "Nutmeg"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 50,
         "fields": {
             "name": "Cloves"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 51,
         "fields": {
             "name": "Coconut Milk"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 52,
         "fields": {
             "name": "Tofu"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 53,
         "fields": {
             "name": "Chocolate"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 54,
         "fields": {
             "name": "Vanilla"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 55,
         "fields": {
             "name": "Almond"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 56,
         "fields": {
             "name": "Walnut"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 57,
         "fields": {
             "name": "Cashew"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 58,
         "fields": {
             "name": "Peanut"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 59,
         "fields": {
             "name": "Avocado"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 60,
         "fields": {
             "name": "Quinoa"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 61,
         "fields": {
             "name": "Chickpea"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 62,
         "fields": {
             "name": "Sweet Potato"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 63,
         "fields": {
             "name": "Bell Pepper"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 64,
         "fields": {
             "name": "Green Beans"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 65,
         "fields": {
             "name": "Broccoli"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 66,
         "fields": {
             "name": "Cauliflower"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 67,
         "fields": {
             "name": "Celery"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 68,
         "fields": {
             "name": "Eggplant"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 69,
         "fields": {
             "name": "Feta Cheese"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 70,
         "fields": {
             "name": "Mozzarella"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 71,
         "fields": {
             "name": "Parmesan"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 72,
         "fields": {
             "name": "Ginger"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 73,
         "fields": {
             "name": "Turmeric"
         }
     },
     {
-        "model": "home_app.ingredient",
+        "model": "core_app.ingredient",
         "pk": 74,
         "fields": {
             "name": "Kale"
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 1,
         "fields": {
             "name": "Margherita Pizza",
@@ -713,7 +713,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 2,
         "fields": {
             "name": "Caesar Salad",
@@ -733,7 +733,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 3,
         "fields": {
             "name": "Grilled Chicken Breast",
@@ -752,7 +752,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 4,
         "fields": {
             "name": "Spaghetti Bolognese",
@@ -772,7 +772,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 5,
         "fields": {
             "name": "Tomato Soup",
@@ -792,7 +792,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 6,
         "fields": {
             "name": "Vegetarian Pizza",
@@ -813,7 +813,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 7,
         "fields": {
             "name": "Chocolate Cake",
@@ -833,7 +833,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 8,
         "fields": {
             "name": "Sushi Platter",
@@ -853,7 +853,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 9,
         "fields": {
             "name": "Tacos",
@@ -873,7 +873,7 @@
         }
     },
     {
-        "model": "home_app.dish",
+        "model": "core_app.dish",
         "pk": 10,
         "fields": {
             "name": "Pancakes",
