@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.views import generic
 
 from core_app.forms import LoginForm, SignUpForm
-from core_app.models import Cook, Dish, Ingredient
+from core_app.models import Cook, Dish, Ingredient, DishType
 
 
 def index(request: HttpRequest) -> HttpResponse:
@@ -26,6 +26,11 @@ class DishesListView(generic.ListView):
 class IngredientsListView(generic.ListView):
     model = Ingredient
     template_name = "pages/ingredient_list.html"
+
+
+class TypesDishListView(generic.ListView):
+    model = DishType
+    template_name = "pages/types_dish_list.html"
 
 
 def login_view(request):

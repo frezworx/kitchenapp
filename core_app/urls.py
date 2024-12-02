@@ -7,6 +7,7 @@ from core_app.views import (
     CooksListView,
     DishesListView,
     IngredientsListView,
+    TypesDishListView,
 )
 
 app_name = "core_app"
@@ -19,6 +20,12 @@ urlpatterns = [
 
     path("cooks/", CooksListView.as_view(), name="cooks-list"),
     path("dishes/", DishesListView.as_view(), name="dishes-list"),
-    path("ingredients/", IngredientsListView.as_view(), name="ingredients-list"),
+    path(
+        "ingredients/<int:pk>/",
+        IngredientsListView.as_view(),
+        name="ingredients-list"
+    ),
+
+    path("types-dish/", TypesDishListView.as_view(), name="types-dish")
 
 ]

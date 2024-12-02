@@ -16,53 +16,55 @@
 }
 
 .description-cell {
-    max-width: 40px;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
+  max-width: 40px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
 }
 
 /* Выровнять поле выбора */
 .checkboxselectmultiple2 {
-    text-align: left !important;
-    width: 100% !important; /* Заполнить всю ширину */
-    min-height: 300px; /* Высота для удобства */
-    padding: 10px !important;
-    font-size: 16px;
-    border: 1px solid #ced4da;
-    border-radius: 4px;
-    background-color: #fff;
+  text-align: left !important;
+  width: 100% !important; /* Заполнить всю ширину */
+  min-height: 300px; /* Высота для удобства */
+  padding: 10px !important;
+  font-size: 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: #fff;
 }
 
 /* Центрирование формы */
 .form-group {
-    margin: 0 auto;
-    max-width: 600px; /* Ограничить ширину формы */
-    text-align: left; /* Выровнять содержимое */
+  margin: 0 auto;
+  max-width: 600px; /* Ограничить ширину формы */
+  text-align: left; /* Выровнять содержимое */
 }
 
 /* Кнопка */
 button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 .scrollable-checkbox {
-    max-height: 200px; /* Высота прокручиваемого блока */
-    overflow-y: scroll; /* Вертикальная прокрутка */
-    border: 1px solid #ddd; /* Рамка */
-    padding: 10px; /* Внутренний отступ */
-    border-radius: 5px; /* Скругленные углы */
-    background-color: #f8f9fa; /* Светлый фон, соответствующий Bootstrap */
+  max-height: 200px; /* Высота прокручиваемого блока */
+  overflow-y: scroll; /* Вертикальная прокрутка */
+  border: 1px solid #ddd; /* Рамка */
+  padding: 10px; /* Внутренний отступ */
+  border-radius: 5px; /* Скругленные углы */
+  background-color: #f8f9fa; /* Светлый фон, соответствующий Bootstrap */
 }
+
+

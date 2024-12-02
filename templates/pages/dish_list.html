@@ -30,7 +30,7 @@
     <div class="container">
       <div class="section text-center">
         <!-- Start table -->
-        <div class="table-responsive">
+        <div>
           <table class="table table-striped">
             <tr>
               <th>ID</th>
@@ -40,18 +40,44 @@
               <th>Ingredients</th>
               <th>Price</th>
             </tr>
-            
-              {% for dish in dish_list %}
-                <tr>
-                  <td>{{ dish.id }}</td>
-                  <td>{{ dish.name }}</td>
-                  <td class="description-cell text-wrap w-20">{{ dish.description }}</td>
-                  <td>{{ dish.type_dish }}</td>
-                  <td><a href="#" class="btn btn-sm btn-primary">Ingredients</a></td>
-                  <td>{{ dish.price }}</td>
-                </tr>
-              {% endfor %}
-            
+            {% for dish in dish_list %}
+              <tr>
+                <td>{{ dish.id }}</td>
+                <td>{{ dish.name }}</td>
+                <td class="description-cell text-wrap w-20">{{ dish.description }}</td>
+                <td>{{ dish.type_dish }}</td>
+                <td>
+                  <ul class="navbar-nav navbar-nav-hover ms-auto">
+                    <li class="nav-item dropdown dropdown-hover dropdown mx-2">
+                      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center"
+                         id="dropdownMenuPages" data-bs-toggle="dropdown"
+                         aria-expanded="false">
+                        Ingredients
+                        <img src="{{ ASSETS_ROOT }}/img/down-arrow-dark.svg"
+                             alt="down-arrow" class="arrow ms-auto ms-md-2">
+                      </a>
+                      <div
+                          class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
+                          aria-labelledby="dropdownMenuPages">
+                        <div class="d-none d-lg-block">
+                          <a href="{% url 'core_app:ingredients-list' dish.pk %}"
+                             class="btn-sm btn-primary">
+                            Go to Ingredients Page
+                          </a><br>
+                          <div class="mt-3">
+                            {% for ingredient in dish.ingredients.all %}
+                            {{ ingredient }}<br>
+                          {% endfor %}
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </td>
+                <td>{{ dish.price }}</td>
+              </tr>
+            {% endfor %}
+
           </table>
         </div>
 
