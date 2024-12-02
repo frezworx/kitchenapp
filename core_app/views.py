@@ -14,11 +14,13 @@ def index(request: HttpRequest) -> HttpResponse:
 class CooksListView(generic.ListView):
     model = Cook
     template_name = "pages/cook_list.html"
+    paginate_by = 5
 
 
 class DishesListView(generic.ListView):
     model = Dish
     template_name = "pages/dish_list.html"
+    paginate_by = 4
 
 
 class IngredientsListView(generic.ListView):

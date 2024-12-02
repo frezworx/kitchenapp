@@ -1,0 +1,76 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+
+{% block title %} Template Page {% endblock %}
+
+{% block body_class %} index-page {% endblock %}
+
+<!-- Specific Page CSS goes HERE  -->
+{% block stylesheets %}{% endblock stylesheets %}
+
+{% block content %}
+
+  {% include 'includes/navigation.html' %}
+
+  <div class="page-header min-vh-55"
+       style="background-image: url('{{ ASSETS_ROOT }}/img/dishes_1.jpg')">
+    <span class="mask bg-gradient-dark opacity-4"></span>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mx-auto">
+          <div class="text-center">
+            <h1 class="text-white">All ours dishes</h1>
+            <h3 class="text-white">Manage a dishes</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6">
+    <div class="container">
+      <div class="section text-center">
+        <!-- Start table -->
+        <div class="table-responsive">
+          <table class="table table-striped">
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Description</th>
+              <th>Type</th>
+              <th>Ingredients</th>
+              <th>Price</th>
+            </tr>
+            
+              {% for dish in dish_list %}
+                <tr>
+                  <td>{{ dish.id }}</td>
+                  <td>{{ dish.name }}</td>
+                  <td class="description-cell text-wrap w-20">{{ dish.description }}</td>
+                  <td>{{ dish.type_dish }}</td>
+                  <td><a href="#" class="btn btn-sm btn-primary">Ingredients</a></td>
+                  <td>{{ dish.price }}</td>
+                </tr>
+              {% endfor %}
+            
+          </table>
+        </div>
+
+        <!-- End table -->
+        <!-- Start pagination -->
+        {% include "includes/pagination.html" %}
+        <!-- End pagination -->
+      </div>
+    </div>
+  </div>
+  <!-- Pop Up window -->
+
+
+
+  <!-- End Pop Up window -->
+{% endblock content %}
+
+<!-- Specific Page JS goes HERE  -->
+{% block javascripts %}
+
+
+{% endblock javascripts %}
