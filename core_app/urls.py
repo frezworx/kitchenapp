@@ -8,6 +8,7 @@ from core_app.views import (
     DishesListView,
     IngredientsListView,
     TypesDishListView,
+    TypeDishDeleteView,
 )
 
 app_name = "core_app"
@@ -26,5 +27,7 @@ urlpatterns = [
         name="ingredients-list"
     ),
     path("types-dish/", TypesDishListView.as_view(), name="types-dish"),
+    path("types-dish/delete/<int:pk>/", TypeDishDeleteView.as_view(),
+         name="type-dish-delete")
 
 ]

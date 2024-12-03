@@ -63,8 +63,11 @@ class TypesDishListView(FormMixin, ListView):
     def form_invalid(self, form):
         return self.render_to_response(self.get_context_data(form=form))
 
-    def get_success_url(self):
-        return reverse_lazy("core_app:types-dish")
+
+class TypeDishDeleteView(generic.DeleteView):
+    model = DishType
+    success_url = reverse_lazy("core_app:types-dish")
+    template_name = "pages/dishtype_confirm_delete.html"
 
 
 def login_view(request):
@@ -123,5 +126,3 @@ def register_user(request):
 def custom_logout(request: HttpRequest):
     logout(request)
     return redirect("/")
-
-

@@ -68,7 +68,12 @@
           <tr>
             <td> {{ dishtype.id }}</td>
             <td>{{ dishtype.name }}</td>
-            <td><a href="#" class="text-danger">Delete</a></td>
+            <td>
+              <a href="{% url 'core_app:type-dish-delete' dishtype.pk %}"
+                 class="text-danger">
+                Delete
+              </a>
+            </td>
           </tr>
         {% endfor %}
 
