@@ -2,6 +2,8 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.forms import UserCreationForm
 from django import forms
 
+from core_app.models import DishType
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(
@@ -53,3 +55,20 @@ class SignUpForm(UserCreationForm):
     class Meta:
         model = get_user_model()
         fields = ('username', 'email', 'password1', 'password2')
+
+
+class DishTypeForm(forms.ModelForm):
+    success_message = None
+
+    class Meta:
+        model = DishType
+        fields = ["name"]
+        labels = {
+            "name": "Add type dish:",  # Здесь укажите новую надпись
+        }
+
+    def clean_name(self):
+        name = self.cleaned_data["name"]
+        if DishType.objects.filter(name__iexact=name).exists():
+            raise forms.ValidationError("This type dish already exists.")
+        return name

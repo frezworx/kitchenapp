@@ -13,6 +13,7 @@ import os
 from pathlib import Path
 
 from dotenv.main import load_dotenv
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -132,3 +133,4 @@ AUTH_USER_MODEL = "core_app.Cook"
 
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
+

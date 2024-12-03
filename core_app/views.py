@@ -1,9 +1,13 @@
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, HttpRequest
 from django.shortcuts import render, redirect
+from django.urls.base import reverse_lazy
 from django.views import generic
+from django.views.generic import ListView
+from django.views.generic.edit import FormMixin
+from django.contrib import messages
 
-from core_app.forms import LoginForm, SignUpForm
+from core_app.forms import LoginForm, SignUpForm, DishTypeForm
 from core_app.models import Cook, Dish, Ingredient, DishType
 
 
@@ -28,9 +32,39 @@ class IngredientsListView(generic.ListView):
     template_name = "pages/ingredient_list.html"
 
 
-class TypesDishListView(generic.ListView):
+class TypesDishListView(FormMixin, ListView):
     model = DishType
     template_name = "pages/types_dish_list.html"
+    paginate_by = 5
+    form_class = DishTypeForm
+    success_url = reverse_lazy("core_app:types-dish")
+    success_message = "Added successfully!"
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if "form" not in context:
+            context["form"] = self.get_form()
+        return context
+
+    def post(self, request, *args, **kwargs):
+        self.object_list = self.get_queryset()
+        form = self.get_form()
+        if form.is_valid():
+            form.success_message = self.success_message
+            return self.form_valid(form)
+        else:
+            return self.form_invalid(form)
+
+    def form_valid(self, form):
+        form.save()
+        messages.success(self.request, self.success_message)
+        return super().form_valid(form)
+
+    def form_invalid(self, form):
+        return self.render_to_response(self.get_context_data(form=form))
+
+    def get_success_url(self):
+        return reverse_lazy("core_app:types-dish")
 
 
 def login_view(request):
@@ -89,3 +123,5 @@ def register_user(request):
 def custom_logout(request: HttpRequest):
     logout(request)
     return redirect("/")
+
+

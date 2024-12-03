@@ -25,7 +25,6 @@ urlpatterns = [
         IngredientsListView.as_view(),
         name="ingredients-list"
     ),
-
-    path("types-dish/", TypesDishListView.as_view(), name="types-dish")
+    path("types-dish/", TypesDishListView.as_view(), name="types-dish"),
 
 ]
