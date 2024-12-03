@@ -67,9 +67,17 @@ class DishesListView(generic.ListView):
     paginate_by = 4
 
 
-class IngredientsListView(generic.ListView):
-    model = Ingredient
-    template_name = "pages/ingredient_list.html"
+class IngredientsListView(generic.DetailView):
+    model = Dish
+    template_name = "pages/dish_ingredients_detail.html"
+
+
+class IngredientsDishUpgradeView:
+    pass
+
+
+class IngredientsDishDeleteView:
+    pass
 
 
 class TypesDishListView(FormMixin, ListView):
