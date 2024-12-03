@@ -48,9 +48,17 @@ class CooksListCreateView(generic.CreateView):
     success_url = reverse_lazy("core_app:cooks-list")
 
 
-
 class CooksUpdateListView(generic.UpdateView):
-    pass
+    model = Cook
+    template_name = "pages/cooks_create.html"
+    fields = [
+        "first_name",
+        "last_name",
+        "years_of_experience",
+        "username",
+    ]
+    success_url = reverse_lazy("core_app:cooks-list")
+
 
 
 class DishesListView(generic.ListView):
