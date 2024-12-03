@@ -36,6 +36,14 @@ class CooksListDelete(generic.DeleteView):
     success_url = reverse_lazy("core_app:cooks-list")
 
 
+class CooksListCreateView(generic.CreateView):
+    pass
+
+
+class CooksUpdateListView(generic.UpdateView):
+    pass
+
+
 class DishesListView(generic.ListView):
     model = Dish
     template_name = "pages/dish_list.html"
