@@ -61,7 +61,7 @@
                   </td>
                   <td>
                     {% if request.user.id != cook.pk %}
-                      <a href="#" class="text-danger">
+                      <a href="{% url 'core_app:cooks-delete' cook.pk %}" class="text-danger">
                         Delete
                       </a>
                     {% else %}

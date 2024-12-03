@@ -12,13 +12,28 @@ from core_app.models import Cook, Dish, Ingredient, DishType
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    return render(request, template_name="pages/index.html")
+    num_cooks = Cook.objects.count()
+    num_dishes = Dish.objects.count()
+    num_types_dishes = DishType.objects.count()
+
+    context = {
+        "num_cooks": num_cooks,
+        "num_dishes": num_dishes,
+        "num_types": num_types_dishes,
+    }
+    return render(request, template_name="pages/index.html", context=context)
 
 
 class CooksListView(generic.ListView):
     model = Cook
     template_name = "pages/cook_list.html"
     paginate_by = 5
+
+
+class CooksListDelete(generic.DeleteView):
+    model = Cook
+    template_name = "pages/cooks_confirm_delete.html"
+    success_url = reverse_lazy("core_app:cooks-list")
 
 
 class DishesListView(generic.ListView):

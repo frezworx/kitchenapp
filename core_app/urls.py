@@ -9,6 +9,7 @@ from core_app.views import (
     IngredientsListView,
     TypesDishListView,
     TypeDishDeleteView,
+    CooksListDelete,
 )
 
 app_name = "core_app"
@@ -20,6 +21,8 @@ urlpatterns = [
     path("logout/", custom_logout, name="logout"),
 
     path("cooks/", CooksListView.as_view(), name="cooks-list"),
+    path("cooks/delete/<int:pk>", CooksListDelete.as_view(),
+         name="cooks-delete"),
     path("dishes/", DishesListView.as_view(), name="dishes-list"),
     path(
         "ingredients/<int:pk>/",
