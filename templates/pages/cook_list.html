@@ -33,7 +33,6 @@
             Add cook
           </a>
         </div>
-
         {% if cook_list %}
           <div class="table-responsive">
             <table class="table table-striped">
@@ -67,7 +66,6 @@
                     {% else %}
                       <span class="text-muted">Not allowed</span>
                     {% endif %}
-
                   </td>
                 </tr>
               {% endfor %}
@@ -76,15 +74,10 @@
         {% else %}
           <p>There are no chefs in the service.></p>
         {% endif %}
-        <!-- Start pagination -->
         {% include "includes/pagination.html" %}
-        <!-- End pagination -->
       </div>
     </div>
   </div>
-  <!-- Pop Up window -->
-  <!-- End Pop Up window -->
-
 {% endblock content %}
 
 <!-- Specific Page JS goes HERE  -->

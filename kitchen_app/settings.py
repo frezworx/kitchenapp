@@ -131,6 +131,6 @@ CRISPY_TEMPLATE_PACK = "bootstrap5"
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 AUTH_USER_MODEL = "core_app.Cook"
 
+LOGIN_URL = "/accounts/register"
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/"
-

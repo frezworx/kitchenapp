@@ -57,7 +57,6 @@ class SignUpForm(UserCreationForm):
         fields = ('username', 'email', 'password1', 'password2')
 
 
-
 class DishTypeForm(forms.ModelForm):
     success_message = None
 

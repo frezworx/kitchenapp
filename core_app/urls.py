@@ -12,8 +12,7 @@ from core_app.views import (
     CooksListDelete,
     CooksListCreateView,
     CooksUpdateListView,
-    IngredientsDishUpgradeView,
-    IngredientsDishDeleteView,
+    IngredientsDishDeleteView, update_ingredients,
 
 )
 
@@ -21,6 +20,7 @@ app_name = "core_app"
 
 urlpatterns = [
     path("", index, name="index"),
+
     path("login/", login_view, name="login"),
     path("accounts/register/", register_user, name="register"),
     path("logout/", custom_logout, name="logout"),
@@ -38,12 +38,12 @@ urlpatterns = [
         name="ingredients-list"
     ),
     path(
-        "ingredients/dish/upgrade/<int:pk>",
-        IngredientsDishUpgradeView.as_view(),
+        "ingredients/dish/upgrade/<int:pk>/",
+        update_ingredients,
         name="ingredient-dish-upgrade"
     ),
     path(
-        "ingredients/dish/delete/<int:pk>",
+        "dish/<int:dish_pk>/ingredient/<int:pk>/delete/",
         IngredientsDishDeleteView.as_view(),
         name="ingredient-dish-delete"
     ),
