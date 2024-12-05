@@ -30,7 +30,10 @@ class Migration(migrations.Migration):
                         verbose_name="ID",
                     ),
                 ),
-                ("password", models.CharField(max_length=128, verbose_name="password")),
+                (
+                    "password",
+                    models.CharField(max_length=128, verbose_name="password"),
+                ),
                 (
                     "last_login",
                     models.DateTimeField(
@@ -63,7 +66,9 @@ class Migration(migrations.Migration):
                 (
                     "email",
                     models.EmailField(
-                        blank=True, max_length=254, verbose_name="email address"
+                        blank=True,
+                        max_length=254,
+                        verbose_name="email address",
                     ),
                 ),
                 (
@@ -85,7 +90,8 @@ class Migration(migrations.Migration):
                 (
                     "date_joined",
                     models.DateTimeField(
-                        default=django.utils.timezone.now, verbose_name="date joined"
+                        default=django.utils.timezone.now,
+                        verbose_name="date joined",
                     ),
                 ),
                 (
@@ -93,7 +99,9 @@ class Migration(migrations.Migration):
                     models.IntegerField(
                         blank=True,
                         null=True,
-                        validators=[django.core.validators.MinValueValidator(0)],
+                        validators=[
+                            django.core.validators.MinValueValidator(0)
+                        ],
                     ),
                 ),
                 ("first_name", models.CharField(max_length=150)),
@@ -145,7 +153,9 @@ class Migration(migrations.Migration):
             options={
                 "ordering": ("name",),
                 "indexes": [
-                    models.Index(fields=["name"], name="core_app_di_name_608f1b_idx")
+                    models.Index(
+                        fields=["name"], name="core_app_di_name_608f1b_idx"
+                    )
                 ],
             },
         ),
@@ -166,7 +176,9 @@ class Migration(migrations.Migration):
             options={
                 "ordering": ("name",),
                 "indexes": [
-                    models.Index(fields=["name"], name="core_app_in_name_69cbdf_idx")
+                    models.Index(
+                        fields=["name"], name="core_app_in_name_69cbdf_idx"
+                    )
                 ],
             },
         ),
@@ -189,13 +201,16 @@ class Migration(migrations.Migration):
                     models.DecimalField(
                         decimal_places=2,
                         max_digits=10,
-                        validators=[django.core.validators.MinValueValidator(0)],
+                        validators=[
+                            django.core.validators.MinValueValidator(0)
+                        ],
                     ),
                 ),
                 (
                     "cooks",
                     models.ManyToManyField(
-                        related_name="prepared_dishes", to=settings.AUTH_USER_MODEL
+                        related_name="prepared_dishes",
+                        to=settings.AUTH_USER_MODEL,
                     ),
                 ),
                 (
@@ -208,14 +223,17 @@ class Migration(migrations.Migration):
                 (
                     "ingredients",
                     models.ManyToManyField(
-                        related_name="included_in_dishes", to="core_app.ingredient"
+                        related_name="included_in_dishes",
+                        to="core_app.ingredient",
                     ),
                 ),
             ],
             options={
                 "ordering": ("name",),
                 "indexes": [
-                    models.Index(fields=["name"], name="core_app_di_name_c4267b_idx")
+                    models.Index(
+                        fields=["name"], name="core_app_di_name_c4267b_idx"
+                    )
                 ],
             },
         ),

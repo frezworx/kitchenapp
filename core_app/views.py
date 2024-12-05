@@ -75,7 +75,7 @@ class IngredientsListView(LoginRequiredMixin, generic.DetailView):
 
 @login_required
 def update_ingredients(request, pk):
-    if request.method == 'POST':
+    if request.method == "POST":
         dish = get_object_or_404(Dish, pk=pk)
         ingredient_name = request.POST.get("ingredient")
         print("ingredient_name:", ingredient_name)
@@ -95,10 +95,11 @@ class IngredientsDishDeleteView(LoginRequiredMixin, View):
         dish = get_object_or_404(Dish, pk=dish_pk)
         ingredient = get_object_or_404(Ingredient, pk=ingredient_pk)
 
-        return render(request, "pages/ingredient_confirm_delete.html", {
-            "dish": dish,
-            "ingredient": ingredient
-        })
+        return render(
+            request,
+            "pages/ingredient_confirm_delete.html",
+            {"dish": dish, "ingredient": ingredient},
+        )
 
     def post(self, request, *args, **kwargs):
         dish_pk = self.kwargs.get("dish_pk")
@@ -162,15 +163,11 @@ def login_view(request):
                 login(request, user)
                 return redirect("/")
             else:
-                msg = 'Invalid credentials'
+                msg = "Invalid credentials"
         else:
-            msg = 'Error validating the form'
+            msg = "Error validating the form"
 
-    return render(
-        request,
-        "accounts/login.html",
-        {"form": form, "msg": msg}
-    )
+    return render(request, "accounts/login.html", {"form": form, "msg": msg})
 
 
 def register_user(request):
@@ -185,18 +182,19 @@ def register_user(request):
             raw_password = form.cleaned_data.get("password1")
             user = authenticate(username=username, password=raw_password)
 
-            msg = 'Account created successfully.'
+            msg = "Account created successfully."
             success = True
+            if user is not None:
+                login(request, user)
+                return redirect("/")
 
-        else:
-            msg = 'Form is not valid'
     else:
         form = SignUpForm()
 
     return render(
         request,
         "accounts/register.html",
-        {"form": form, "msg": msg, "success": success}
+        {"form": form, "msg": msg, "success": success},
     )
 
 

@@ -22,5 +22,3 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("core_app.urls")),
 ]
-
-
