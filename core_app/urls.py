@@ -25,7 +25,9 @@ urlpatterns = [
     path("logout/", custom_logout, name="logout"),
     path("cooks/", CooksListView.as_view(), name="cooks-list"),
     path(
-        "cooks/delete/<int:pk>", CooksListDelete.as_view(), name="cooks-delete"
+        "cooks/delete/<int:pk>/",
+        CooksListDelete.as_view(),
+        name="cooks-delete"
     ),
     path("cooks/create/", CooksListCreateView.as_view(), name="cooks-create"),
     path(
