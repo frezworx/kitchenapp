@@ -6,7 +6,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.urls.base import reverse_lazy
 from django.views import generic
 from django.views.generic import ListView, View
-from django.views.generic.edit import FormMixin
+from django.views.generic.edit import FormMixin, FormView
 from django.contrib import messages
 
 from core_app.forms import LoginForm, SignUpForm, DishTypeForm
@@ -170,34 +170,67 @@ def login_view(request):
     return render(request, "accounts/login.html", {"form": form, "msg": msg})
 
 
-def register_user(request):
-    msg = None
-    success = False
+class RegisterUserView(FormView):
+    template_name = "accounts/register.html"
+    form_class = SignUpForm
+    success_url = "/"
 
-    if request.method == "POST":
-        form = SignUpForm(request.POST)
-        if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get("username")
-            raw_password = form.cleaned_data.get("password1")
-            user = authenticate(username=username, password=raw_password)
+    def form_valid(self, form):
+        user = form.save()
+        username = form.cleaned_data.get("username")
+        raw_password = form.cleaned_data.get("password1")
+        user = authenticate(username=username, password=raw_password)
 
-            msg = "Account created successfully."
-            success = True
-            if user is not None:
-                login(request, user)
-                return redirect("/")
+        if user is not None:
+            login(self.request, user)
+        return redirect(self.success_url)
 
-    else:
-        form = SignUpForm()
+    def form_invalid(self, form):
+        return self.render_to_response(
+            self.get_context_data(
+                form=form,
+                msg="Form is invalid.",
+                success=False
+            )
+        )
 
-    return render(
-        request,
-        "accounts/register.html",
-        {"form": form, "msg": msg, "success": success},
-    )
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["msg"] = context.get("msg", None)
+        context["success"] = context.get("success", None)
+        return context
+
+
+# def register_user(request):
+#     msg = None
+#     success = False
+#
+#     if request.method == "POST":
+#         form = SignUpForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             username = form.cleaned_data.get("username")
+#             raw_password = form.cleaned_data.get("password1")
+#             user = authenticate(username=username, password=raw_password)
+#
+#             msg = "Account created successfully."
+#             success = True
+#             if user is not None:
+#                 login(request, user)
+#                 return redirect("/")
+#
+#     else:
+#         form = SignUpForm()
+#
+#     return render(
+#         request,
+#         "accounts/register.html",
+#         {"form": form, "msg": msg, "success": success},
+#     )
 
 
 def custom_logout(request: HttpRequest):
     logout(request)
     return redirect("/")
+
+# TODO update_ingredients, login_view, register_user - rewrite it as a class view
