@@ -148,26 +148,37 @@ class TypeDishDeleteView(LoginRequiredMixin, generic.DeleteView):
     template_name = "pages/dishtype_confirm_delete.html"
 
 
-def login_view(request):
-    form = LoginForm(request.POST or None)
+class LoginUserView(FormView):
+    template_name = "accounts/login.html"
+    form_class = LoginForm
+    success_url = "/"
 
-    msg = None
+    def form_valid(self, form):
+        username = form.cleaned_data.get("username")
+        password = form.cleaned_data.get("password")
+        user = authenticate(username=username, password=password)
 
-    if request.method == "POST":
-
-        if form.is_valid():
-            username = form.cleaned_data.get("username")
-            password = form.cleaned_data.get("password")
-            user = authenticate(username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect("/")
-            else:
-                msg = "Invalid credentials"
+        if user is not None:
+            login(self.request, user)
+            return redirect(self.success_url)
         else:
-            msg = "Error validating the form"
+            return self.render_to_response(
+                self.get_context_data(
+                    form=form, msg="Invalid credentials"
+                )
+            )
 
-    return render(request, "accounts/login.html", {"form": form, "msg": msg})
+    def form_invalid(self, form):
+        return self.render_to_response(
+            self.get_context_data(
+                form=form, msg="Error validating the form"
+            )
+        )
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["msg"] = context.get("msg", None)
+        return context
 
 
 class RegisterUserView(FormView):
@@ -200,37 +211,6 @@ class RegisterUserView(FormView):
         context["success"] = context.get("success", None)
         return context
 
-
-# def register_user(request):
-#     msg = None
-#     success = False
-#
-#     if request.method == "POST":
-#         form = SignUpForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             username = form.cleaned_data.get("username")
-#             raw_password = form.cleaned_data.get("password1")
-#             user = authenticate(username=username, password=raw_password)
-#
-#             msg = "Account created successfully."
-#             success = True
-#             if user is not None:
-#                 login(request, user)
-#                 return redirect("/")
-#
-#     else:
-#         form = SignUpForm()
-#
-#     return render(
-#         request,
-#         "accounts/register.html",
-#         {"form": form, "msg": msg, "success": success},
-#     )
-
-
 def custom_logout(request: HttpRequest):
     logout(request)
     return redirect("/")
-
-# TODO update_ingredients, login_view, register_user - rewrite it as a class view
