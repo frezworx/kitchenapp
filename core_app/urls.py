@@ -1,7 +1,6 @@
 from django.urls import path
 from core_app.views import (
     index,
-    custom_logout,
     CooksListView,
     DishesListView,
     IngredientsListView,
@@ -14,6 +13,7 @@ from core_app.views import (
     update_ingredients,
     RegisterUserView,
     LoginUserView,
+    LogoutUserView,
 )
 
 app_name = "core_app"
@@ -22,7 +22,7 @@ urlpatterns = [
     path("", index, name="index"),
     path("login/", LoginUserView.as_view(), name="login"),
     path("accounts/register/", RegisterUserView.as_view(), name="register"),
-    path("logout/", custom_logout, name="logout"),
+    path("logout/", LogoutUserView.as_view(), name="logout"),
     path("cooks/", CooksListView.as_view(), name="cooks-list"),
     path(
         "cooks/delete/<int:pk>/",

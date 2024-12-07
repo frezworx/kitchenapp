@@ -211,6 +211,9 @@ class RegisterUserView(FormView):
         context["success"] = context.get("success", None)
         return context
 
-def custom_logout(request: HttpRequest):
-    logout(request)
-    return redirect("/")
+
+class LogoutUserView(View):
+    def get(self, request: HttpRequest):
+        logout(request)
+        return redirect("/")
+
