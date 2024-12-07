@@ -10,10 +10,9 @@ from core_app.views import (
     CooksListCreateView,
     CooksUpdateListView,
     IngredientsDishDeleteView,
-    update_ingredients,
     RegisterUserView,
     LoginUserView,
-    LogoutUserView,
+    LogoutUserView, UpgradeIngredientsView,
 )
 
 app_name = "core_app"
@@ -43,7 +42,7 @@ urlpatterns = [
     ),
     path(
         "ingredients/dish/upgrade/<int:pk>/",
-        update_ingredients,
+        UpgradeIngredientsView.as_view(),
         name="ingredient-dish-upgrade",
     ),
     path(

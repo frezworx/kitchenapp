@@ -73,17 +73,16 @@ class IngredientsListView(LoginRequiredMixin, generic.DetailView):
     template_name = "pages/dish_ingredients_detail.html"
 
 
-@login_required
-def update_ingredients(request, pk):
-    if request.method == "POST":
+class UpgradeIngredientsView(LoginRequiredMixin, View):
+    def post(self, request, pk):
         dish = get_object_or_404(Dish, pk=pk)
         ingredient_name = request.POST.get("ingredient")
-        print("ingredient_name:", ingredient_name)
         if ingredient_name:
             ingredient, created = Ingredient.objects.get_or_create(
                 name=ingredient_name
             )
             dish.ingredients.add(ingredient)
+
         return redirect("core_app:ingredients-list", pk=pk)
 
 
@@ -216,4 +215,3 @@ class LogoutUserView(View):
     def get(self, request: HttpRequest):
         logout(request)
         return redirect("/")
-
