@@ -44,9 +44,16 @@ class Dish(models.Model):
     name = models.CharField(max_length=255, unique=True)
     description = models.TextField(blank=True)
     price = models.DecimalField(
-        max_digits=10, decimal_places=2, validators=[MinValueValidator(0)]
+        max_digits=10,
+        decimal_places=2,
+        validators=[MinValueValidator(0)],
     )
-    type_dish = models.ForeignKey(DishType, on_delete=CASCADE)
+    type_dish = models.ForeignKey(
+        DishType,
+        on_delete=CASCADE,
+        null=True,
+        blank=True
+    )
     cooks = models.ManyToManyField(Cook, related_name="prepared_dishes")
     ingredients = models.ManyToManyField(
         Ingredient, related_name="included_in_dishes"
