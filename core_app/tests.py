@@ -1,5 +1,3 @@
-from django.contrib.auth import get_user_model
-
 from core_app.models import Cook, Dish, DishType
 from django.test import TestCase, Client
 from django.urls import reverse
@@ -54,34 +52,41 @@ class CooksUpdateListViewTests(TestCase):
     def setUp(self):
         self.client = Client()
         self.cook = Cook.objects.create_user(
-            username='testuser',
-            password='Secret123',
-            first_name='John',
-            last_name='Doe',
-            years_of_experience=5
+            username="testuser",
+            password="Secret123",
+            first_name="John",
+            last_name="Doe",
+            years_of_experience=5,
         )
-        self.client.login(username='testuser', password='Secret123')
+        self.client.login(username="testuser", password="Secret123")
 
     def test_get_update_view(self):
         response = self.client.get(
-            reverse('core_app:cooks-update', kwargs={'pk': self.cook.pk}))
+            reverse(
+                "core_app:cooks-update", kwargs={"pk": self.cook.pk}
+            )
+        )
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'pages/cooks_create.html')
+        self.assertTemplateUsed(
+            response, "pages/cooks_create.html"
+        )
 
     def test_post_update_view(self):
         data = {
-            'first_name': 'Jane',
-            'last_name': 'Smith',
-            'years_of_experience': 10,
-            'username': 'testuser'
+            "first_name": "Jane",
+            "last_name": "Smith",
+            "years_of_experience": 10,
+            "username": "testuser",
         }
         response = self.client.post(
-            reverse('core_app:cooks-update', kwargs={'pk': self.cook.pk}),
-            data)
+            reverse(
+                "core_app:cooks-update", kwargs={"pk": self.cook.pk}
+            ), data
+        )
         self.assertEqual(response.status_code, 302)
         self.cook.refresh_from_db()
-        self.assertEqual(self.cook.first_name, 'Jane')
-        self.assertEqual(self.cook.last_name, 'Smith')
+        self.assertEqual(self.cook.first_name, "Jane")
+        self.assertEqual(self.cook.last_name, "Smith")
         self.assertEqual(self.cook.years_of_experience, 10)
 
 
@@ -90,27 +95,30 @@ class CooksListDeleteTest(TestCase):
     def setUp(self):
         self.client = Client()
         self.cook = Cook.objects.create_user(
-            username='testuser',
-            password='Secret123',
-            first_name='John',
-            last_name='Doe',
-            years_of_experience=5
+            username="testuser",
+            password="Secret123",
+            first_name="John",
+            last_name="Doe",
+            years_of_experience=5,
         )
 
         self.test_del_cook = Cook.objects.create_user(
-            username='testuser2',
-            password='Secret123',
-            first_name='John2',
-            last_name='Doe2',
-            years_of_experience=1
+            username="testuser2",
+            password="Secret123",
+            first_name="John2",
+            last_name="Doe2",
+            years_of_experience=1,
         )
-        self.client.login(username='testuser', password='Secret123')
+        self.client.login(username="testuser", password="Secret123")
 
     def test_delete_cook(self):
         response = self.client.post(
-            reverse('core_app:cooks-delete', args=[self.test_del_cook.id]),
+            reverse("core_app:cooks-delete",
+                    args=[self.test_del_cook.id]),
         )
         print(f"Response status: {response.status_code}")
         print(f"Response URL: {response.url}")
-        self.assertRedirects(response, reverse('core_app:cooks-list'))
-        self.assertFalse(Cook.objects.filter(id=self.test_del_cook.id).exists())
+        self.assertRedirects(response, reverse("core_app:cooks-list"))
+        self.assertFalse(
+            Cook.objects.filter(id=self.test_del_cook.id).exists()
+        )
