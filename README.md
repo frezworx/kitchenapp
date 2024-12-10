@@ -10,9 +10,6 @@
 
   <p align="center">
     A streamlined solution for consolidating, managing, and analyzing all your kitchen data.
-    <br />
-    <a href="https://github.com/frezworx/kitchenapp"><strong>Documentation »</strong></a>
-    <br />
   </p>
 
 
@@ -28,10 +25,11 @@
     - [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
+- [Acknowledgments](#acknowledgments)
 
 
 
-## About the Project
+### About the Project
 
 **KitchenApp** is an application designed for managing kitchen-related
 information. Its main goal is to simplify the collection, storage, and
@@ -108,3 +106,8 @@ Once KitchenApp is running, you can:
 Vadym aka Frezworx - frezworx@gmail.com
 
 Project Link: https://github.com/frezworx/kitchenapp
+
+### Acknowledgments
+- <a href="https://www.djangoproject.com/">Django Documentation</a>
+- <a href="https://getbootstrap.com/">Bootstrap</a>
+- <a href="https://github.com/othneildrew/Best-README-Template">Othneil Drew's Best README Template</a>
