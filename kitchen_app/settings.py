@@ -24,12 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 load_dotenv()
-SECRET_KEY = os.getenv("SECRET_KEY", "jango-insecure-9!=k(mlg7mav0l^@f1k2f2d5byb3=3o2ltpds&dxbku18*5fj8")
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DJANGO_DEBUG", "") != "False"
-
-ALLOWED_HOSTS = ["127.0.0.1"]
+SECRET_KEY = os.getenv(
+    "SECRET_KEY",
+    "jango-insecure-9!=k(mlg7mav0l^@f1k2f2d5byb3=3o2ltpds&dxbku18*5fj8"
+)
 
 # Application definition
 
@@ -75,16 +73,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "kitchen_app.wsgi.application"
-
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
-    }
-}
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
