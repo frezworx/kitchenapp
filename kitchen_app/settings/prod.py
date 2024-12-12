@@ -22,3 +22,5 @@ DATABASES = {
     }
 }
 STATIC_ROOT = "staticfiles"
+
+MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
