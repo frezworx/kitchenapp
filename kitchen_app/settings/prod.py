@@ -21,3 +21,4 @@ DATABASES = {
         },
     }
 }
+STATIC_ROOT = "staticfiles"
