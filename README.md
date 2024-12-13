@@ -5,15 +5,24 @@
   <a href="https://github.com/frezworx/kitchenapp">
     <img src="static/k_app.jpg" alt="Logo" width="240" height="160">
   </a>
+<br>
+<p align="center">
+  <a href="https://kitchenapp.onrender.com">
+    <span style="color: blue; font-size: 24px; font-weight: bold; text-decoration: underline;">
+    CLICK LINK FOR DEMO
+    <p align="center" style="font-size: 20px;">
+        login: <b>user</b> <br>
+        password: <b>user12345</b>
+</p>
+</span>
+  </a>
+</p>
 
 <h3 align="center">KitchenApp</h3>
 
   <p align="center">
     A streamlined solution for consolidating, managing, and analyzing all your kitchen data.
   </p>
-
-
-
 
 ## Table of Contents
 
@@ -26,8 +35,6 @@
 - [Usage](#usage)
 - [Contact](#contact)
 - [Acknowledgments](#acknowledgments)
-
-
 
 ### About the Project
 
@@ -55,7 +62,6 @@ processes, and improve efficiency.
 - **Database**: SQLite
 - **Frontend**: HTML, CSS, JS
 - **Libraries & Tools**: Django ORM, Bootstrap
-
 
 ## Getting Started
 
@@ -94,20 +100,25 @@ To get a local copy up and running, follow the steps below.
    http://127.0.0.1:8000/
 
 ### Usage
+
 Once KitchenApp is running, you can:
 
 - Add, edit, and remove cooks and dishes.
 - Organize recipes and cooking processes.
 - Quickly filter and search through data.
 - Gain insights into cooking times, dish popularity, and staff performance.
-- Use the platform to streamline your workflow, ensure quality control, and make data-driven decisions.
+- Use the platform to streamline your workflow, ensure quality control, and
+  make data-driven decisions.
 
 ### Contact
+
 Vadym aka Frezworx - frezworx@gmail.com
 
 Project Link: https://github.com/frezworx/kitchenapp
 
 ### Acknowledgments
+
 - <a href="https://www.djangoproject.com/">Django Documentation</a>
 - <a href="https://getbootstrap.com/">Bootstrap</a>
-- <a href="https://github.com/othneildrew/Best-README-Template">Othneil Drew's Best README Template</a>
+- <a href="https://github.com/othneildrew/Best-README-Template">Othneil Drew's
+  Best README Template</a>
